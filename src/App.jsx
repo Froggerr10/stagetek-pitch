@@ -3,16 +3,14 @@ import Slide from './components/Slide';
 
 import IntroSlide from './components/slides/IntroSlide';
 import ProblemSlide from './components/slides/ProblemSlide';
+import MarketSlide from './components/slides/MarketSlide';
 import SolutionSlide from './components/slides/SolutionSlide';
 import TechnicalSlide from './components/slides/TechnicalSlide';
 import SupplyChainSlide from './components/slides/SupplyChainSlide';
 import PricingSlide from './components/slides/PricingSlide';
-import SimulationSlide from './components/slides/SimulationSlide';
-import SkythunderSlide from './components/slides/SkythunderSlide';
-import TaxStrategySlide from './components/slides/TaxStrategySlide';
-import EcosystemSlide from './components/slides/EcosystemSlide';
-import PaymentFlowSlide from './components/slides/PaymentFlowSlide';
-import MarketSlide from './components/slides/MarketSlide';
+import CenarioLoteSlide from './components/slides/CenarioLoteSlide';
+import RiscoSlide from './components/slides/RiscoSlide';
+import ModeloParticipacaoSlide from './components/slides/ModeloParticipacaoSlide';
 import FinancialSlide from './components/slides/FinancialSlide';
 import ClosingSlide from './components/slides/ClosingSlide';
 
@@ -26,34 +24,28 @@ function App() {
                 <ProblemSlide />
             </Slide>
             <Slide className="bg-stagetek-black">
+                <MarketSlide />
+            </Slide>
+            <Slide className="bg-stagetek-nearBlack">
                 <SolutionSlide />
             </Slide>
-            <Slide className="bg-stagetek-nearBlack">
+            <Slide className="bg-stagetek-black">
                 <TechnicalSlide />
             </Slide>
-            <Slide className="bg-stagetek-black">
+            <Slide className="bg-stagetek-nearBlack">
                 <SupplyChainSlide />
             </Slide>
-            <Slide className="bg-stagetek-nearBlack">
+            <Slide className="bg-stagetek-black">
                 <PricingSlide />
             </Slide>
-            <Slide className="bg-stagetek-black">
-                <SimulationSlide />
-            </Slide>
             <Slide className="bg-stagetek-nearBlack">
-                <SkythunderSlide />
+                <CenarioLoteSlide />
             </Slide>
             <Slide className="bg-stagetek-black">
-                <TaxStrategySlide />
+                <RiscoSlide />
             </Slide>
             <Slide className="bg-stagetek-nearBlack">
-                <EcosystemSlide />
-            </Slide>
-            <Slide className="bg-stagetek-black">
-                <PaymentFlowSlide />
-            </Slide>
-            <Slide className="bg-stagetek-nearBlack">
-                <MarketSlide />
+                <ModeloParticipacaoSlide />
             </Slide>
             <Slide className="bg-stagetek-black">
                 <FinancialSlide />

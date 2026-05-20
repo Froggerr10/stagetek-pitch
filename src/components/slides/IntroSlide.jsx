@@ -5,7 +5,7 @@ import logo from '../../assets/logo.svg';
 
 const IntroSlide = () => {
     return (
-        <div className="relative w-full h-full flex flex-col items-center justify-center text-center px-4">
+        <div className="relative w-full h-full flex flex-col items-center justify-center text-center px-6 md:px-8">
             {/* Background Image with Overlay */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center"
@@ -33,7 +33,7 @@ const IntroSlide = () => {
                     transition={{ duration: 0.8, delay: 0.4 }}
                     className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-tight"
                 >
-                    Proposta de Parceria
+                    Primeiro Ciclo Comercial
                 </motion.h1>
 
                 {/* Subtitle */}
@@ -43,7 +43,7 @@ const IntroSlide = () => {
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="text-xl md:text-2xl text-gray-300 font-light tracking-wide"
                 >
-                    O Futuro das Talhas Elétricas no Brasil
+                    Uma oportunidade lastreada em estoque físico, demanda identificada e operação já estruturada.
                 </motion.p>
             </div>
         </div>

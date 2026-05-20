@@ -13,7 +13,7 @@ const SkythunderSlide = () => {
                 className="text-center mb-16"
             >
                 <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                    Skythunder: <span className="text-stagetek-red">Inteligência Financeira</span>
+                    <span className="text-stagetek-red">Inteligência Financeira</span>
                 </h2>
                 <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                     Eficiência Fiscal e Fluxo de Caixa D+1
@@ -70,7 +70,7 @@ const SkythunderSlide = () => {
             >
                 <div className="px-4 py-2 bg-white/5 rounded-lg border border-white/10">Cliente (10x)</div>
                 <ArrowRight className="w-4 h-4" />
-                <div className="px-4 py-2 bg-stagetek-red/20 text-stagetek-red rounded-lg border border-stagetek-red/30 font-bold">Skythunder Split</div>
+                <div className="px-4 py-2 bg-stagetek-red/20 text-stagetek-red rounded-lg border border-stagetek-red/30 font-bold">Split Automático</div>
                 <div className="flex flex-col gap-2">
                     <div className="flex items-center gap-2">
                         <ArrowRight className="w-4 h-4 -rotate-45" />

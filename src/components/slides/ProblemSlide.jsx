@@ -7,23 +7,23 @@ const ProblemSlide = () => {
     const painPoints = [
         {
             icon: <AlertTriangle className="w-8 h-8 text-red-500" />,
-            title: "Dependência Externa",
-            description: "Variações cambiais imprevisíveis corroem margens. A dependência total de importação dificulta o planejamento financeiro."
+            title: "Alto Custo das Soluções",
+            description: "Equipamentos internacionais chegam com preços elevados e condições de pagamento pouco acessíveis para empresas de médio porte no Brasil."
         },
         {
             icon: <Clock className="w-8 h-8 text-red-500" />,
-            title: "Prazos Longos",
-            description: "Lead times de 90+ dias paralisam projetos. A falta de reposição imediata resulta em cancelamentos e perda de receita."
+            title: "Prazos e Disponibilidade",
+            description: "Lead times longos de importação direta paralisam projetos e impedem reposição rápida para eventos e locações."
         },
         {
             icon: <Wrench className="w-8 h-8 text-red-500" />,
-            title: "Risco Operacional",
-            description: "Equipamentos parados por falta de peças geram riscos de segurança, passivos trabalhistas e multas contratuais."
+            title: "Risco Operacional e Legal",
+            description: "Falta de suporte técnico local e ausência de certificações nacionais geram passivos operacionais e jurídicos para quem opera os equipamentos."
         },
         {
             icon: <Users className="w-8 h-8 text-red-500" />,
-            title: "Falta de Profissionais",
-            description: "Escassez de mão de obra qualificada e desconhecimento técnico dos produtos no mercado."
+            title: "Profissionalização do Setor",
+            description: "O mercado exige padrões crescentes de segurança e capacitação técnica que ainda não são bem atendidos pela oferta disponível."
         }
     ];
 
@@ -31,27 +31,27 @@ const ProblemSlide = () => {
         {
             icon: <CheckCircle2 className="w-8 h-8 text-green-500" />,
             title: "Estoque Local",
-            description: "Produtos prontos para entrega no Brasil."
+            description: "Produtos disponíveis no Brasil, com entrega ágil e sem dependência de importação direta pelo cliente."
         },
         {
             icon: <CheckCircle2 className="w-8 h-8 text-green-500" />,
             title: "Engenharia Nacional",
-            description: "Adaptação técnica e certificações locais."
+            description: "Adaptação técnica, certificação NR-12 e ART para cada aplicação."
         },
         {
             icon: <CheckCircle2 className="w-8 h-8 text-green-500" />,
-            title: "Suporte Ágil",
-            description: "Manutenção e peças disponíveis imediatamente."
+            title: "Suporte Dedicado",
+            description: "Manutenção, peças e assistência técnica com tempo de resposta estruturado."
         },
         {
             icon: <GraduationCap className="w-8 h-8 text-green-500" />,
-            title: "Programa de Qualificação",
-            description: "Treinamento técnico e certificação para equipes operacionais."
+            title: "Capacitação Técnica",
+            description: "Programa de treinamento e qualificação para equipes operacionais dos clientes."
         }
     ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 flex flex-col justify-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}

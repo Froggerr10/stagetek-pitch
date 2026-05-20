@@ -1,27 +1,33 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import bridgeBg from '../../assets/bridge_concept.png';
-import { TrendingDown, Palette, Headphones } from 'lucide-react';
+import { Package, Palette, Headphones, CreditCard } from 'lucide-react';
 
 const SolutionSlide = () => {
     const features = [
         {
-            icon: <TrendingDown className="w-10 h-10 text-stagetek-red" />,
-            title: "Redução de Custos",
-            value: "40-60%",
-            description: "Estratégia tributária e logística otimizada aumentam a competitividade frente à importação direta."
+            icon: <Package className="w-10 h-10 text-stagetek-red" />,
+            title: "Produto com Demanda Real",
+            value: "Mercado Ativo",
+            description: "Talhas com aplicação direta em shows, feiras, eventos corporativos e instalações — demanda identificada e clientes em contato."
         },
         {
             icon: <Palette className="w-10 h-10 text-stagetek-red" />,
-            title: "Engenharia Nacional",
+            title: "Engenharia e Certificação",
             value: "NR-12",
-            description: "Produtos adaptados às normas brasileiras (NR-12) com ART. Segurança jurídica e operacional."
+            description: "Produtos adaptados às normas brasileiras com ART. Segurança jurídica e operacional para cada projeto."
         },
         {
             icon: <Headphones className="w-10 h-10 text-stagetek-red" />,
-            title: "Suporte Premium",
+            title: "Suporte e Treinamento",
             value: "SLA 24h",
-            description: "Programa de Atendimento Corporativo (PAC) com estoque local de peças e técnicos certificados."
+            description: "Programa de Atendimento Corporativo com estoque local de peças, técnicos certificados e capacitação de equipes."
+        },
+        {
+            icon: <CreditCard className="w-10 h-10 text-stagetek-red" />,
+            title: "Condições Facilitadas de Venda",
+            value: "Até 18x",
+            description: "Estratégia comercial com parcelamento em até 18 vezes e antecipação de recebíveis — facilitando o acesso do cliente e acelerando o giro do estoque."
         }
     ];
 
@@ -35,7 +41,7 @@ const SolutionSlide = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
             </div>
 
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 {/* Text Content */}
                 <div className="space-y-8">
                     <motion.div
@@ -44,12 +50,11 @@ const SolutionSlide = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
-                            A Ponte <br />
-                            <span className="text-stagetek-red">Global-Local</span>
+                            Operação <br />
+                            <span className="text-stagetek-red">Estruturada</span>
                         </h2>
                         <p className="text-xl text-gray-300 leading-relaxed">
-                            Conectamos a qualidade da engenharia global com a agilidade da operação local.
-                            A Stagetek elimina as barreiras de importação, oferecendo uma solução completa e acessível.
+                            A Stagetek conecta curadoria técnica de fornecedores internacionais, engenharia local e capacidade comercial para entregar talhas e soluções de rigging com suporte, treinamento e disponibilidade no Brasil.
                         </p>
                     </motion.div>
 

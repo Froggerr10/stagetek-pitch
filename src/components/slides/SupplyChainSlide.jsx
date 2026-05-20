@@ -16,7 +16,7 @@ const SupplyChainSlide = () => {
                 <div className="absolute inset-0 bg-black/40" />
             </div>
 
-            <div className="relative z-10 w-full max-w-5xl mx-auto px-4 flex flex-col h-full justify-center">
+            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col h-full justify-center">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}

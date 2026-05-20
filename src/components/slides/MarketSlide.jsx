@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const MarketSlide = () => {
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 flex flex-col justify-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +14,7 @@ const MarketSlide = () => {
                     Oportunidade de Mercado
                 </h2>
                 <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Potencial de crescimento escalável e validado.
+                    Demanda real, mercado em expansão e espaço identificado para operação local estruturada.
                 </p>
             </motion.div>
 
@@ -70,6 +70,7 @@ const MarketSlide = () => {
                                 <p className="text-3xl font-black text-black">US$ 1.8M</p>
                             </div>
                         </div>
+                        <p className="text-xs text-gray-500 mt-3 text-center">Baseado em demanda identificada pela Stagetek e indicadores setoriais de retomada do mercado de eventos.</p>
                     </div>
                 </motion.div>
             </div>

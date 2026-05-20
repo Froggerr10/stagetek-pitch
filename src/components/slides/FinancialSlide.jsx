@@ -1,17 +1,44 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { ArrowRight } from 'lucide-react';
 
 const FinancialSlide = () => {
-    const data = [
-        { year: "2025", revenue: 0.875, label: "R$ 875k*" },
-        { year: "2026", revenue: 3.5, label: "R$ 3.5M" },
-        { year: "2027", revenue: 6.0, label: "R$ 6.0M" }
+    const stages = [
+        {
+            number: "01",
+            title: "Ciclo Inicial",
+            subtitle: "Validação operacional",
+            description: "Formação do primeiro estoque, venda assistida com clientes já mapeados e validação do giro do lote.",
+            color: "border-stagetek-red",
+            textColor: "text-stagetek-red"
+        },
+        {
+            number: "02",
+            title: "Expansão Comercial",
+            subtitle: "Novos ciclos",
+            description: "Reposição de estoque com base no giro validado, ampliação do mix e entrada em clientes recorrentes.",
+            color: "border-white/40",
+            textColor: "text-white"
+        },
+        {
+            number: "03",
+            title: "Escala Operacional",
+            subtitle: "Previsibilidade",
+            description: "Maior eficiência logística por volume, serviços associados e recorrência comercial consolidada.",
+            color: "border-white/20",
+            textColor: "text-gray-300"
+        }
     ];
 
-    const maxRevenue = 6.0;
+    const drivers = [
+        "Diluição de custos fixos com escala",
+        "Melhor aproveitamento logístico por lote",
+        "Venda de serviços e suporte técnico associados",
+        "Recorrência via relacionamento comercial"
+    ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 flex flex-col justify-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -19,89 +46,57 @@ const FinancialSlide = () => {
                 className="text-center mb-16"
             >
                 <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                    Projeções Financeiras
+                    Caminho de <span className="text-stagetek-red">Expansão</span>
                 </h2>
                 <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Crescimento consistente e expansão de margem.
-                </p>
-                <p className="text-sm text-gray-500 mt-4 max-w-2xl mx-auto">
-                    *2025: Demanda Reprimida (50 talhas não atendidas).
-                    <br />
-                    Cálculo baseado no potencial de venda de 50 talhas de 1 tonelada ao preço de R$ 17.500.
+                    O primeiro ciclo como validação operacional para crescimento sustentável.
                 </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
-                {/* Bar Chart */}
-                <div className="h-96 flex items-end justify-between gap-4 bg-white/5 rounded-2xl p-8 border border-white/10">
-                    {data.map((item, index) => (
-                        <div key={index} className="flex flex-col items-center w-full h-full justify-end">
-                            <motion.div
-                                initial={{ height: 0 }}
-                                whileInView={{ height: `${(item.revenue / maxRevenue) * 80}%` }}
-                                transition={{ duration: 1, delay: index * 0.2, ease: "easeOut" }}
-                                className="w-full bg-gradient-to-t from-stagetek-red to-red-500 rounded-t-lg relative group"
-                            >
-                                <div className="absolute -top-8 left-1/2 -translate-x-1/2 text-white font-bold opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-                                    {item.label}
-                                </div>
-                            </motion.div>
-                            <div className="mt-4 text-gray-400 font-mono">{item.year}</div>
-                            <div className="mt-1 text-white font-bold text-lg md:text-xl">{item.label}</div>
-                        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                {/* Stages */}
+                <div className="space-y-6">
+                    {stages.map((stage, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}
+                            className={`flex gap-6 p-6 bg-white/5 rounded-2xl border ${stage.color} hover:bg-white/10 transition-colors`}
+                        >
+                            <div className={`text-4xl font-black ${stage.textColor} shrink-0`}>{stage.number}</div>
+                            <div>
+                                <h3 className={`text-xl font-bold ${stage.textColor} mb-1`}>{stage.title}</h3>
+                                <p className="text-xs text-gray-500 uppercase tracking-wider mb-2">{stage.subtitle}</p>
+                                <p className="text-gray-400 text-sm">{stage.description}</p>
+                            </div>
+                        </motion.div>
                     ))}
                 </div>
 
-                {/* EBITDA & Metrics */}
-                <div className="space-y-8">
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
-                        className="bg-white/5 rounded-2xl p-8 border border-white/10"
-                    >
-                        <h3 className="text-2xl font-bold text-gray-300 mb-2">EBITDA</h3>
-                        <div className="flex items-end gap-4">
-                            <span className="text-5xl font-black text-white">18%</span>
-                            <span className="text-gray-500 mb-2">→</span>
-                            <span className="text-6xl font-black text-green-500">28%</span>
-                        </div>
-                        <ul className="text-gray-400 mt-4 space-y-2 text-sm">
-                            <li className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                                Diluição de Custos Fixos (Escala)
+                {/* Drivers */}
+                <motion.div
+                    initial={{ opacity: 0, x: 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: 0.4 }}
+                    className="bg-white/5 rounded-2xl p-8 border border-white/10"
+                >
+                    <h3 className="text-2xl font-bold text-white mb-6">Eficiência Operacional</h3>
+                    <p className="text-gray-400 text-sm mb-6">
+                        A eficiência da operação tende a crescer com o volume, com a diluição de custos fixos e com a consolidação do relacionamento comercial.
+                    </p>
+                    <ul className="space-y-4">
+                        {drivers.map((driver, i) => (
+                            <li key={i} className="flex items-center gap-3 text-gray-300">
+                                <span className="w-2 h-2 bg-stagetek-red rounded-full shrink-0" />
+                                {driver}
                             </li>
-                            <li className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                                Mix de Serviços de Alta Margem (PAC)
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                                Eficiência Logística na Importação
-                            </li>
-                            <li className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 bg-green-500 rounded-full" />
-                                Inteligência Financeira (Skythunder/Split)
-                            </li>
-                        </ul>
-                    </motion.div>
-
-                    <motion.div
-                        initial={{ opacity: 0, x: 30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                        className="grid grid-cols-2 gap-4"
-                    >
-                        <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                            <p className="text-gray-400 text-sm mb-1">Clientes PAC</p>
-                            <p className="text-3xl font-bold text-white">15-30</p>
-                        </div>
-                        <div className="bg-white/5 rounded-xl p-6 border border-white/10">
-                            <p className="text-gray-400 text-sm mb-1">Break-even</p>
-                            <p className="text-3xl font-bold text-white">15 Clientes</p>
-                        </div>
-                    </motion.div>
-                </div>
+                        ))}
+                    </ul>
+                    <div className="mt-8 p-4 bg-white/5 rounded-xl border border-white/10 text-center">
+                        <p className="text-xs text-gray-500">Projeções detalhadas por cenário disponíveis em reunião técnica.</p>
+                    </div>
+                </motion.div>
             </div>
         </div>
     );

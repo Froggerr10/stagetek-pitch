@@ -1,35 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Check, Zap, ArrowRightLeft, DollarSign } from 'lucide-react';
+import { Info } from 'lucide-react';
 import Card from '../ui/Card';
 
 const PricingSlide = () => {
     const products = [
         {
-            name: "Talha 1t + Case",
-            cost: "R$ 6.196",
-            pricePix: "R$ 16.723",
-            price10x: "R$ 18.563",
-            margin: "38,9%"
+            name: "Talha 500 kg + Case",
+            positioning: "Linha de entrada",
+            strategy: "Preço competitivo frente à importação direta. Alta rotatividade.",
+            note: "Ideal para novos clientes e projetos de menor escala."
         },
         {
-            name: "Talha 2t + Case",
-            cost: "R$ 8.542",
-            pricePix: "R$ 23.054",
-            price10x: "R$ 25.590",
-            margin: "39,1%"
+            name: "Talha 1.000 kg + Case",
+            positioning: "Produto principal do ciclo",
+            strategy: "Melhor relação entre volume de venda e resultado por unidade.",
+            note: "Âncora do primeiro lote. Maior demanda identificada."
         },
         {
-            name: "Controller 12 vias",
-            cost: "R$ 4.005",
-            pricePix: "R$ 10.810",
-            price10x: "R$ 12.000",
-            margin: "39,9%"
+            name: "Talha 2.000 kg + Case",
+            positioning: "Linha premium",
+            strategy: "Ticket mais elevado. Aplicação em projetos robustos e clientes de alto padrão.",
+            note: "Complementa o mix com margem por unidade superior."
         }
     ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 flex flex-col justify-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -37,42 +34,40 @@ const PricingSlide = () => {
                 className="text-center mb-10"
             >
                 <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                    Estrutura de <span className="text-stagetek-red">Preços e Rentabilidade</span>
+                    Estrutura <span className="text-stagetek-red">Comercial</span>
                 </h2>
                 <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                    Margens sólidas com competitividade de mercado.
+                    Precificação desenhada para preservar competitividade e resultado operacional.
                 </p>
             </motion.div>
 
             <div className="w-full max-w-5xl mx-auto">
-                <Card className="h-full overflow-hidden p-0 border-t-4 border-t-stagetek-red">
+                <Card className="overflow-hidden p-0 border-t-4 border-t-stagetek-red">
                     <div className="overflow-x-auto">
                         <table className="w-full text-left border-collapse">
                             <thead>
                                 <tr className="bg-white/5 border-b border-white/10 text-gray-400 text-sm uppercase tracking-wider">
                                     <th className="p-6 font-semibold">Produto</th>
-                                    <th className="p-6 font-semibold">Custo</th>
-                                    <th className="p-6 font-semibold">Preço (Pix)</th>
-                                    <th className="p-6 font-semibold text-stagetek-red">Preço (10x)</th>
-                                    <th className="p-6 font-semibold text-green-500">Margem Líq.</th>
+                                    <th className="p-6 font-semibold">Posicionamento</th>
+                                    <th className="p-6 font-semibold">Estratégia Comercial</th>
+                                    <th className="p-6 font-semibold">Observação</th>
                                 </tr>
                             </thead>
                             <tbody className="text-gray-300 divide-y divide-white/5">
                                 {products.map((product, index) => (
                                     <tr key={index} className="hover:bg-white/5 transition-colors">
                                         <td className="p-6 font-medium text-white text-lg">{product.name}</td>
-                                        <td className="p-6 text-gray-500">{product.cost}</td>
-                                        <td className="p-6">{product.pricePix}</td>
-                                        <td className="p-6 font-bold text-white text-lg">{product.price10x}</td>
-                                        <td className="p-6 font-bold text-green-500 text-lg">{product.margin}</td>
+                                        <td className="p-6 text-stagetek-red font-medium">{product.positioning}</td>
+                                        <td className="p-6 text-gray-300">{product.strategy}</td>
+                                        <td className="p-6 text-gray-500 text-sm">{product.note}</td>
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
                     </div>
-                    <div className="p-6 bg-white/5 border-t border-white/10 text-sm text-gray-500 flex justify-between items-center">
-                        <span>*Margem líquida após impostos e comissões.</span>
-                        <span className="flex items-center gap-1"><Check className="w-4 h-4 text-green-500" /> Dados validados (Nota Técnica DY)</span>
+                    <div className="p-5 bg-white/5 border-t border-white/10 flex items-center gap-3 text-sm text-gray-500">
+                        <Info className="w-4 h-4 shrink-0" />
+                        <span>Detalhamento de preços, custos e margens disponível em reunião técnica.</span>
                     </div>
                 </Card>
             </div>

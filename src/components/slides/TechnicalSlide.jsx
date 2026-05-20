@@ -1,43 +1,41 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Shield, Users, Move, X, Check } from 'lucide-react';
+import { Package, Weight, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 const TechnicalSlide = () => {
-    const standards = [
+    const products = [
         {
-            name: "D8",
-            description: "Padrão Básico",
-            peopleUnderLoad: false,
-            moveLoad: false,
-            safety: "1 Freio",
+            capacity: "500 kg",
+            description: "Linha de entrada",
+            icon: <Package className="w-12 h-12 text-gray-400" />,
+            tags: ["Eventos corporativos", "Instalações permanentes", "Feiras e exposições"],
+            note: "Alta rotatividade, menor ticket, ideal para entrada em novos clientes.",
             color: "text-gray-400",
             borderColor: "border-gray-700"
         },
         {
-            name: "D8+",
-            description: "Padrão Internacional",
-            peopleUnderLoad: true,
-            peopleCondition: "(Parado)",
-            moveLoad: false,
-            safety: "2 Freios, Fator 8:1",
+            capacity: "1.000 kg",
+            description: "Produto principal do ciclo",
+            icon: <Package className="w-12 h-12 text-stagetek-red" />,
+            tags: ["Shows e turnês", "Produtoras e locadoras", "Projetos de médio porte"],
+            note: "Produto de maior giro e demanda identificada. Âncora do primeiro lote.",
             color: "text-stagetek-red",
             borderColor: "border-stagetek-red",
             highlight: true
         },
         {
-            name: "C1",
-            description: "Padrão Internacional Avançado",
-            peopleUnderLoad: true,
-            moveLoad: true,
-            safety: "2 Freios, Sensores, Controle Seguro",
+            capacity: "2.000 kg",
+            description: "Linha premium",
+            icon: <Package className="w-12 h-12 text-white" />,
+            tags: ["Grandes produções", "Projetos técnicos robustos", "Clientes de alto ticket"],
+            note: "Menor volume, maior margem por unidade. Complementa o mix do lote.",
             color: "text-white",
-            borderColor: "border-white",
-            highlight: true
+            borderColor: "border-white/40"
         }
     ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-4 flex flex-col justify-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -45,78 +43,44 @@ const TechnicalSlide = () => {
                 className="text-center mb-12"
             >
                 <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
-                    Domínio Técnico <span className="text-stagetek-red">&</span> Segurança
+                    Portfólio do <span className="text-stagetek-red">Primeiro Ciclo</span>
                 </h2>
                 <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                    A diferença entre as classificações define a segurança da operação.
+                    Três linhas de talhas elétricas com aplicação direta no mercado brasileiro de eventos e instalações.
                 </p>
             </motion.div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {standards.map((std, index) => (
+                {products.map((product, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.2 }}
-                        className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-2 ${std.borderColor} flex flex-col gap-6 hover:bg-white/10 transition-colors`}
+                        className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-2 ${product.borderColor} flex flex-col gap-4 hover:bg-white/10 transition-colors`}
                     >
-                        {std.highlight && (
-                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-black px-4 py-1 rounded-full border border-white/20 text-sm font-bold uppercase tracking-wider text-white">
-                                Foco Stagetek
+                        {product.highlight && (
+                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-black px-4 py-1 rounded-full border border-stagetek-red/50 text-sm font-bold uppercase tracking-wider text-stagetek-red">
+                                Âncora do Lote
                             </div>
                         )}
 
                         <div className="text-center border-b border-white/10 pb-6">
-                            <h3 className={`text-5xl font-black ${std.color} mb-2`}>{std.name}</h3>
-                            <p className="text-gray-400">{std.description}</p>
+                            <div className="flex justify-center mb-3">{product.icon}</div>
+                            <h3 className={`text-5xl font-black ${product.color} mb-1`}>{product.capacity}</h3>
+                            <p className="text-gray-400 text-sm">{product.description}</p>
                         </div>
 
-                        <div className="space-y-4 flex-1">
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-3 text-gray-300">
-                                    <Users className="w-5 h-5" />
-                                    <span>Pessoas Embaixo</span>
-                                </div>
-                                {std.peopleUnderLoad ? (
-                                    <div className="flex items-center gap-2 text-green-500 font-bold">
-                                        <Check className="w-5 h-5" />
-                                        <span>Sim {std.peopleCondition}</span>
-                                    </div>
-                                ) : (
-                                    <div className="flex items-center gap-2 text-red-500 font-bold">
-                                        <X className="w-5 h-5" />
-                                        <span>Não</span>
-                                    </div>
-                                )}
-                            </div>
+                        <ul className="space-y-2 flex-1">
+                            {product.tags.map((tag, i) => (
+                                <li key={i} className="flex items-center gap-2 text-gray-300 text-sm">
+                                    <CheckCircle2 className="w-4 h-4 text-gray-500 shrink-0" />
+                                    {tag}
+                                </li>
+                            ))}
+                        </ul>
 
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-3 text-gray-300">
-                                    <Move className="w-5 h-5" />
-                                    <span>Mover Carga</span>
-                                </div>
-                                {std.moveLoad ? (
-                                    <div className="flex items-center gap-2 text-green-500 font-bold">
-                                        <Check className="w-5 h-5" />
-                                        <span>Sim</span>
-                                    </div>
-                                ) : (
-                                    <div className="flex items-center gap-2 text-red-500 font-bold">
-                                        <X className="w-5 h-5" />
-                                        <span>Não</span>
-                                    </div>
-                                )}
-                            </div>
-
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-3 text-gray-300">
-                                    <Shield className="w-5 h-5" />
-                                    <span>Segurança</span>
-                                </div>
-                                <span className="text-right text-sm font-mono text-gray-400">{std.safety}</span>
-                            </div>
-                        </div>
+                        <p className="text-xs text-gray-500 border-t border-white/10 pt-3">{product.note}</p>
                     </motion.div>
                 ))}
             </div>
