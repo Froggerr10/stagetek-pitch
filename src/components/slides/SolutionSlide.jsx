@@ -32,7 +32,7 @@ const SolutionSlide = () => {
     ];
 
     return (
-        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+        <div className="relative w-full min-h-screen md:h-full flex items-center justify-center overflow-visible md:overflow-hidden">
             {/* Background Image */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center"

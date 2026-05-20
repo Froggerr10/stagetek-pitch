@@ -11,7 +11,7 @@ const ClosingSlide = () => {
     ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-6 md:py-14 flex flex-col justify-center h-full text-center">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-6 md:py-14 flex flex-col justify-center md:h-full text-center">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}

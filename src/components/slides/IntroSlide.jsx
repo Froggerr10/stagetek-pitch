@@ -5,7 +5,7 @@ import logo from '../../assets/logo.svg';
 
 const IntroSlide = () => {
     return (
-        <div className="relative w-full h-full flex flex-col items-center justify-center text-center px-6 md:px-8">
+        <div className="relative w-full min-h-screen md:h-full flex flex-col items-center justify-center text-center px-6 md:px-8">
             {/* Background Image with Overlay */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center"

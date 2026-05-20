@@ -7,7 +7,7 @@ import Card from '../ui/Card';
 
 const SupplyChainSlide = () => {
     return (
-        <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+        <div className="relative w-full min-h-screen md:h-full flex items-center justify-center overflow-visible md:overflow-hidden">
             {/* Background Image */}
             <div
                 className="absolute inset-0 z-0 bg-cover bg-center"
@@ -16,7 +16,7 @@ const SupplyChainSlide = () => {
                 <div className="absolute inset-0 bg-black/40" />
             </div>
 
-            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-8 py-6 md:py-16 flex flex-col h-full justify-center">
+            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-8 py-6 md:py-16 flex flex-col md:h-full justify-center">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
