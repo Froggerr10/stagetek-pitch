@@ -16,22 +16,22 @@ const SupplyChainSlide = () => {
                 <div className="absolute inset-0 bg-black/40" />
             </div>
 
-            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col h-full justify-center">
+            <div className="relative z-10 w-full max-w-5xl mx-auto px-6 md:px-8 py-6 md:py-16 flex flex-col h-full justify-center">
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-center mb-12"
+                    className="text-center mb-5 md:mb-12"
                 >
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                    <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-2 md:mb-4">
                         Supply Chain <span className="text-stagetek-red">Estratégico</span>
                     </h2>
-                    <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                    <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
                         Mitigação de riscos e redundância de fornecimento.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 items-center">
                     {/* Imagem da talha */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}

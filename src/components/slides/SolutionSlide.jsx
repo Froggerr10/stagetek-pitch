@@ -41,7 +41,7 @@ const SolutionSlide = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
             </div>
 
-            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-8 py-6 md:py-16 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center">
                 {/* Text Content */}
                 <div className="space-y-8">
                     <motion.div
@@ -49,16 +49,16 @@ const SolutionSlide = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
+                        <h2 className="text-3xl sm:text-5xl md:text-7xl font-bold text-white mb-3 md:mb-6">
                             Operação <br />
                             <span className="text-stagetek-red">Estruturada</span>
                         </h2>
-                        <p className="text-xl text-gray-300 leading-relaxed">
+                        <p className="text-sm md:text-xl text-gray-300 leading-relaxed">
                             A Stagetek conecta curadoria técnica de fornecedores internacionais, engenharia local e capacidade comercial para entregar talhas e soluções de rigging com suporte, treinamento e disponibilidade no Brasil.
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 gap-6">
+                    <div className="grid grid-cols-1 gap-3 md:gap-6">
                         {features.map((feature, index) => (
                             <motion.div
                                 key={index}

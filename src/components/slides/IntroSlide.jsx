@@ -31,7 +31,7 @@ const IntroSlide = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="text-6xl md:text-8xl font-bold text-white mb-4 tracking-tight"
+                    className="text-3xl sm:text-5xl md:text-8xl font-bold text-white mb-3 md:mb-4 tracking-tight"
                 >
                     Primeiro Ciclo Comercial
                 </motion.h1>
@@ -41,7 +41,7 @@ const IntroSlide = () => {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="text-xl md:text-2xl text-gray-300 font-light tracking-wide"
+                    className="text-sm sm:text-xl md:text-2xl text-gray-300 font-light tracking-wide px-4 md:px-0"
                 >
                     Uma oportunidade lastreada em estoque físico, demanda identificada e operação já estruturada.
                 </motion.p>

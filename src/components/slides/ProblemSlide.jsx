@@ -51,33 +51,33 @@ const ProblemSlide = () => {
     ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14 flex flex-col justify-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-6 md:py-14 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-12"
+                className="text-center mb-4 md:mb-12"
             >
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-2 md:mb-4">
                     Dores do Mercado <span className="text-stagetek-red">vs</span> Solução
                 </h2>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
                     "Importamos com estratégia, estocamos no Brasil e entregamos com rapidez — eliminando a dependência dos prazos internacionais."
                 </p>
             </motion.div>
 
             {/* Headers */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
-                <h3 className="text-2xl font-bold text-red-500 flex items-center gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-3 md:gap-8 md:mb-6">
+                <h3 className="text-lg md:text-2xl font-bold text-red-500 flex items-center gap-2">
                     <AlertTriangle /> O Cenário Atual
                 </h3>
-                <h3 className="text-2xl font-bold text-green-500 flex items-center gap-2 hidden md:flex">
+                <h3 className="text-lg md:text-2xl font-bold text-green-500 flex items-center gap-2 hidden md:flex">
                     <CheckCircle2 /> A Resposta Stagetek
                 </h3>
             </div>
 
             {/* Grid Content */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-x-8 md:gap-y-6">
                 {painPoints.map((pain, index) => {
                     const solution = solutions[index];
                     return (

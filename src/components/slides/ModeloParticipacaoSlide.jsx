@@ -28,22 +28,22 @@ const options = [
 
 const ModeloParticipacaoSlide = () => {
     return (
-        <div className="w-full max-w-5xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col justify-center h-full">
+        <div className="w-full max-w-5xl mx-auto px-6 md:px-8 py-6 md:py-16 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-12"
+                className="text-center mb-5 md:mb-12"
             >
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-2 md:mb-4">
                     Modelo de <span className="text-stagetek-red">Participação</span>
                 </h2>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
                     A proposta pode ser estruturada de forma simples e transparente, vinculando o aporte ao resultado do primeiro ciclo comercial.
                 </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-6 mb-4 md:mb-8">
                 {options.map((option, index) => (
                     <Card key={index} delay={index * 0.15} className={`border-t-4 ${option.border}`}>
                         <div className="flex items-start gap-3">

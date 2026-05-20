@@ -26,17 +26,17 @@ const PricingSlide = () => {
     ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col justify-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-6 md:py-16 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-10"
+                className="text-center mb-5 md:mb-10"
             >
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-2 md:mb-4">
                     Estrutura <span className="text-stagetek-red">Comercial</span>
                 </h2>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
                     Precificação desenhada para preservar competitividade e resultado operacional.
                 </p>
             </motion.div>
@@ -46,20 +46,20 @@ const PricingSlide = () => {
                     <div className="overflow-x-auto">
                         <table className="w-full text-left border-collapse">
                             <thead>
-                                <tr className="bg-white/5 border-b border-white/10 text-gray-400 text-sm uppercase tracking-wider">
-                                    <th className="p-6 font-semibold">Produto</th>
-                                    <th className="p-6 font-semibold">Posicionamento</th>
-                                    <th className="p-6 font-semibold">Estratégia Comercial</th>
-                                    <th className="p-6 font-semibold">Observação</th>
+                                <tr className="bg-white/5 border-b border-white/10 text-gray-400 text-xs uppercase tracking-wider">
+                                    <th className="p-3 md:p-6 font-semibold">Produto</th>
+                                    <th className="p-3 md:p-6 font-semibold">Posicionamento</th>
+                                    <th className="p-3 md:p-6 font-semibold hidden sm:table-cell">Estratégia Comercial</th>
+                                    <th className="p-3 md:p-6 font-semibold hidden md:table-cell">Observação</th>
                                 </tr>
                             </thead>
                             <tbody className="text-gray-300 divide-y divide-white/5">
                                 {products.map((product, index) => (
                                     <tr key={index} className="hover:bg-white/5 transition-colors">
-                                        <td className="p-6 font-medium text-white text-lg">{product.name}</td>
-                                        <td className="p-6 text-stagetek-red font-medium">{product.positioning}</td>
-                                        <td className="p-6 text-gray-300">{product.strategy}</td>
-                                        <td className="p-6 text-gray-500 text-sm">{product.note}</td>
+                                        <td className="p-3 md:p-6 font-medium text-white text-sm md:text-lg">{product.name}</td>
+                                        <td className="p-3 md:p-6 text-stagetek-red font-medium text-sm">{product.positioning}</td>
+                                        <td className="p-3 md:p-6 text-gray-300 text-sm hidden sm:table-cell">{product.strategy}</td>
+                                        <td className="p-3 md:p-6 text-gray-500 text-xs hidden md:table-cell">{product.note}</td>
                                     </tr>
                                 ))}
                             </tbody>

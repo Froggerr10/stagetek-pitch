@@ -35,29 +35,29 @@ const TechnicalSlide = () => {
     ];
 
     return (
-        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col justify-center h-full">
+        <div className="w-full max-w-7xl mx-auto px-6 md:px-8 py-6 md:py-16 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-12"
+                className="text-center mb-5 md:mb-12"
             >
-                <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-2 md:mb-4">
                     Portfólio do <span className="text-stagetek-red">Primeiro Ciclo</span>
                 </h2>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
                     Três linhas de talhas elétricas com aplicação direta no mercado brasileiro de eventos e instalações.
                 </p>
             </motion.div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
                 {products.map((product, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: index * 0.2 }}
-                        className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-8 border-2 ${product.borderColor} flex flex-col gap-4 hover:bg-white/10 transition-colors`}
+                        className={`relative bg-white/5 backdrop-blur-sm rounded-2xl p-5 md:p-8 border-2 ${product.borderColor} flex flex-col gap-3 md:gap-4 hover:bg-white/10 transition-colors`}
                     >
                         {product.highlight && (
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-black px-4 py-1 rounded-full border border-stagetek-red/50 text-sm font-bold uppercase tracking-wider text-stagetek-red">
@@ -67,7 +67,7 @@ const TechnicalSlide = () => {
 
                         <div className="text-center border-b border-white/10 pb-6">
                             <div className="flex justify-center mb-3">{product.icon}</div>
-                            <h3 className={`text-5xl font-black ${product.color} mb-1`}>{product.capacity}</h3>
+                            <h3 className={`text-3xl md:text-5xl font-black ${product.color} mb-1`}>{product.capacity}</h3>
                             <p className="text-gray-400 text-sm">{product.description}</p>
                         </div>
 

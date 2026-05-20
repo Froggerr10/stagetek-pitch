@@ -16,7 +16,7 @@ import ClosingSlide from './components/slides/ClosingSlide';
 
 function App() {
     return (
-        <div className="bg-stagetek-black min-h-screen text-white snap-y snap-mandatory h-screen overflow-y-scroll scroll-smooth">
+        <div className="bg-stagetek-black min-h-screen text-white scroll-smooth md:snap-y md:snap-mandatory md:h-screen md:overflow-y-scroll">
             <Slide className="bg-stagetek-black">
                 <IntroSlide />
             </Slide>

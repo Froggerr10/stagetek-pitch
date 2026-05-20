@@ -28,17 +28,17 @@ const risks = [
 
 const RiscoSlide = () => {
     return (
-        <div className="w-full max-w-5xl mx-auto px-6 md:px-8 py-10 md:py-16 flex flex-col justify-center h-full">
+        <div className="w-full max-w-5xl mx-auto px-6 md:px-8 py-6 md:py-16 flex flex-col justify-center h-full">
             <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-center mb-12"
+                className="text-center mb-5 md:mb-12"
             >
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white mb-2 md:mb-4">
                     Riscos <span className="text-stagetek-red">Mapeados</span> e Mitigações
                 </h2>
-                <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+                <p className="text-sm md:text-xl text-gray-400 max-w-3xl mx-auto">
                     Uma operação transparente começa por reconhecer e endereçar os riscos.
                 </p>
             </motion.div>
